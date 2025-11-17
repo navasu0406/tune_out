@@ -11,7 +11,7 @@ const DisplayHome = () => {
 
   const fetchAlbums = async () => {
     try {
-      const res = await fetch("http://localhost:4000/api/album/list");
+      const res = await fetch("https://tune-out-backend.onrender.com");
       const data = await res.json();
       if (data.success) setAlbums(data.albums);
     } catch (err) {
