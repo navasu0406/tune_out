@@ -13,7 +13,7 @@ const DisplayAlbum = () => {
 
   // fetch single album
   const fetchAlbum = async () => {
-    const res = await fetch("https://tune-out-backend.onrender.com");
+    const res = await fetch("https://tune-out-backend.onrender.com/api/album/list");
     const data = await res.json();
 
     if (data.success) {
@@ -24,7 +24,7 @@ const DisplayAlbum = () => {
 
   // fetch songs for this album
   const fetchSongs = async () => {
-    const res = await fetch("https://tune-out-backend.onrender.com");
+    const res = await fetch("https://tune-out-backend.onrender.com/api/song/list");
     const data = await res.json();
 
     if (data.success && album) {
