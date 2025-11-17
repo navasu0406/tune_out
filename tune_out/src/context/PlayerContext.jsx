@@ -7,7 +7,7 @@ const PlayerContextProvider = ({ children }) => {
   const audioRef = useRef();
   const seekBg = useRef();
   const seekBar = useRef();
-  const url = "http://localhost:4000";
+  const url = "https://tune-out-backend.onrender.com";
 
   const [songsData, setSongsData] = useState([]);
   const [albumsData, setAlbumsData] = useState([]);
