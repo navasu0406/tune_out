@@ -21,7 +21,7 @@ const DisplayHome = () => {
 
   const fetchSongs = async () => {
     try {
-      const res = await fetch("http://localhost:4000/api/song/list");
+      const res = await fetch("https://tune-out-backend.onrender.com");
       const data = await res.json();
       if (data.success) setSongs(data.songs);
     } catch (err) {
