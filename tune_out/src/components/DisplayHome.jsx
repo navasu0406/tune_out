@@ -11,7 +11,7 @@ const DisplayHome = () => {
 
   const fetchAlbums = async () => {
     try {
-      const res = await fetch("https://tune-out-backend.onrender.com");
+      const res = await fetch("https://tune-out-backend.onrender.com/api/album/list");
       const data = await res.json();
       if (data.success) setAlbums(data.albums);
     } catch (err) {
@@ -21,7 +21,7 @@ const DisplayHome = () => {
 
   const fetchSongs = async () => {
     try {
-      const res = await fetch("https://tune-out-backend.onrender.com");
+      const res = await fetch("https://tune-out-backend.onrender.com/api/song/list");
       const data = await res.json();
       if (data.success) setSongs(data.songs);
     } catch (err) {
